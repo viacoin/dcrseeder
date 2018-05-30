@@ -13,7 +13,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/decred/dcrd/wire"
+	"github.com/viacoin/viad/wire"
 	"github.com/miekg/dns"
 )
 

@@ -3,15 +3,6 @@
 
 [[projects]]
   branch = "master"
-  name = "github.com/agl/ed25519"
-  packages = [
-    ".",
-    "edwards25519"
-  ]
-  revision = "5312a61534124124185d41f09206b9fef1d88403"
-
-[[projects]]
-  branch = "master"
   name = "github.com/btcsuite/btclog"
   packages = ["."]
   revision = "84c8d2346e9fc8c7b947e243b9c24e6df9fd206a"
@@ -24,47 +15,15 @@
 
 [[projects]]
   branch = "master"
+  name = "github.com/btcsuite/golangcrypto"
+  packages = ["ripemd160"]
+  revision = "53f62d9b43e87a6c56975cf862af7edf33a8d0df"
+
+[[projects]]
+  branch = "master"
   name = "github.com/davecgh/go-spew"
   packages = ["spew"]
   revision = "8991bc29aa16c548c550c7ff78260e27b9ab7c73"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/dchest/blake256"
-  packages = ["."]
-  revision = "dee3fe6eb0e98dc774a94fc231f85baf7c29d360"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/decred/base58"
-  packages = ["."]
-  revision = "56c501706f00d9e1cfacee19a27117e12da24734"
-
-[[projects]]
-  name = "github.com/decred/dcrd"
-  packages = [
-    "blockchain",
-    "blockchain/internal/dbnamespace",
-    "blockchain/internal/progresslog",
-    "blockchain/stake",
-    "blockchain/stake/internal/dbnamespace",
-    "blockchain/stake/internal/ticketdb",
-    "blockchain/stake/internal/tickettreap",
-    "chaincfg",
-    "chaincfg/chainec",
-    "chaincfg/chainhash",
-    "database",
-    "dcrec/edwards",
-    "dcrec/secp256k1",
-    "dcrec/secp256k1/schnorr",
-    "dcrjson",
-    "dcrutil",
-    "peer",
-    "txscript",
-    "wire"
-  ]
-  revision = "fd99f572cfd52ca722ad501ccb34acdcb22b4a67"
-  version = "v1.2.0"
 
 [[projects]]
   name = "github.com/jessevdk/go-flags"
@@ -80,11 +39,38 @@
 
 [[projects]]
   branch = "master"
+  name = "github.com/viacoin/viad"
+  packages = [
+    "blockchain",
+    "btcec",
+    "chaincfg",
+    "chaincfg/chainhash",
+    "database",
+    "peer",
+    "txscript",
+    "wire"
+  ]
+  revision = "65fc0aa9fc9238d39504ca7fbbf6fc96900b136b"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/viacoin/viautil"
+  packages = [
+    ".",
+    "base58",
+    "bech32"
+  ]
+  revision = "ed9ec48290bc085ae179946a14675bf2249fc718"
+
+[[projects]]
+  branch = "master"
   name = "golang.org/x/crypto"
   packages = [
     "ed25519",
     "ed25519/internal/edwards25519",
-    "ripemd160"
+    "pbkdf2",
+    "ripemd160",
+    "scrypt"
   ]
   revision = "21052ae46654ecf18dfdba0f7c12701a1e2b3164"
 
@@ -103,6 +89,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "1caf226927ec002a72bd615f1dd21abaa7dbde22166f01066ade3e98747ce38c"
+  inputs-digest = "5ca57dbe2bb801c9e162dc111920d83c0e3dfcb7b0f085a80ea17d384690618b"
   solver-name = "gps-cdcl"
   solver-version = 1

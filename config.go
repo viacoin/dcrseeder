@@ -10,13 +10,13 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/decred/dcrd/chaincfg"
-	"github.com/decred/dcrd/dcrutil"
+	"github.com/viacoin/viad/chaincfg"
+	"github.com/viacoin/viautil"
 	flags "github.com/jessevdk/go-flags"
 )
 
 const (
-	defaultConfigFilename = "dcrseeder.conf"
+	defaultConfigFilename = "viaseeder.conf"
 )
 
 var (
@@ -25,7 +25,7 @@ var (
 
 	// Default configuration options
 	defaultConfigFile = filepath.Join(defaultHomeDir, defaultConfigFilename)
-	defaultHomeDir    = dcrutil.AppDataDir("dcrseeder", false)
+	defaultHomeDir    = viautil.AppDataDir("viaseeder", false)
 )
 
 // config defines the configuration options for hardforkdemo.
@@ -119,7 +119,7 @@ func loadConfig() (*config, error) {
 	}
 
 	if cfg.TestNet {
-		activeNetParams = &chaincfg.TestNet2Params
+		activeNetParams = &chaincfg.TestNet3Params
 	}
 
 	return &cfg, nil
